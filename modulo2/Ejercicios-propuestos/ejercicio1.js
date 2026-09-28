@@ -1,24 +1,21 @@
-/*
-Ejercicio 1
-Una tienda ofrece descuentos dependiendo de la cantidad de productos que se compran.
-Si se compran más de 10 productos, se tiene un 20% de descuento; si se compran entre 5 y 10, 
-se obtiene un 10%, y si se compran menos de 5, no hay descuento.
-Crea las variables necesarias para satisfacer el ejercicio.
+
+/* Determina si un número es perfecto o no.
+
+Un número perfecto es un número entero positivo que es igual a la suma de sus divisores propios positivos.
 
 */
 
-let qtyProductos = 20;
-let valorProductos = 100000;
+let numero1 = parseInt(prompt("Ingrese un número:"));
+let suma1 = 0;
 
+for (let i = 1; i < numero1; i++) {
+    if (numero1 % i === 0) {
+        suma1 += i;
+    }
+}
 
-let descuento = qtyProductos > 10 ? 0.2
-              : qtyProductos>= 5 && qtyProductos <=10 ?  0.1
-              :  0;
-
-let totalPagar = valorProductos - (valorProductos*descuento);
-
-console.log(`
-    productos:      ${qtyProductos}
-    valor compra:   ${valorProductos}
-    Descuento:      ${descuento*100}%
-    Valor a pagar:  ${totalPagar}`)
+if (suma1 === numero1) {
+    console.log("El número es perfecto");
+} else {
+    console.log("El número no es perfecto");
+}

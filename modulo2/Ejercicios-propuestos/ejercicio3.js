@@ -1,25 +1,18 @@
-/* Ejercicio 3
-Una empresa tiene almacenada la información de sus empleados en diccionarios de datos.
-La empresa otorgará unos bonos a los empleados que tuvieron más de 60 ventas.
-Determina si un empleado tiene o no bono. */
+/*
+Crea las tablas de multiplicar del 1 al 10.
+*/
 
-const empleados = [
-    { nombre: "Ana", ventas: 32 },
-    { nombre: "Fernando", ventas: 67 },
-    { nombre: "Carla", ventas: 70 }
-];
+let num3=1;
 
-// Opcion 1: Usando el método forEach (el más directo)
-empleados.forEach(empleado => {
-    if (empleado.ventas > 60) {
-        console.log(`El empleado ${empleado.nombre} TIENE derecho a bono.`);
-    } else {
-        console.log(`El empleado ${empleado.nombre} NO tiene derecho a bono.`);
+for(let i=1; i<11; i++) {
+ console.log(`-- Tabla del ${i}--`)
+
+ for(let j=0; j<10; j++) {
+    console.log(`
+    ${i} x ${num3} = ${i*num3}
+    `)
+      num3++;
+      if(num3>10){num3=1;}
     }
-});
-
-for (let i = 0; i < 3; i++) {
-
-  console.log(i);
 
 }

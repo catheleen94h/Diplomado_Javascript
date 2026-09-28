@@ -1,32 +1,30 @@
 /*
-Ejercicio 2
-Se necesita saber si un estudiante aprobó o no. 
-Un estudiante aprueba con una nota igual o superior al 60%. Se tienen las siguientes notas:
-•Parcial del 25%
-•Quiz del 20%
-•Talleres del 30%
-•Parcial del 25%
-Calcula un promedio para un estudiante X y asigna notas al azar para cada una de las actividades.
+Ahora, a parte del número perfecto, se necesita calcular el factorial de un número.
+El factorial de un entero positivo n, el factorial de n o n factorial, se define en principio como el producto de todos los números enteros positivos desde 1 (es decir, los números naturales) hasta n.
 */
 
-let parcial = 0.25;
-let quiz = 0.2;
-let talleres = 0.3;
-let parcial2 = 0.25;
+let numero = parseInt(prompt("Ingrese un número:"));
 
-let nota1 = 2.9;
-let nota2 = 1.5;
-let nota3 = 4.5;
-let nota4 = 2.5;
+// Número perfecto
+let suma = 0;
 
-notaMax= 5.0; //100%
-minimoAprobar= (notaMax *60)/100;
+for (let i = 1; i < numero; i++) {
+    if (numero % i === 0) {
+        suma += i;
+    }
+}
 
-let notaFinal = (nota1*parcial)+(nota2*quiz)+(nota3*talleres)+(parcial2*nota4);
+if (suma === numero) {
+    console.log("El número es perfecto");
+} else {
+    console.log("El número no es perfecto");
+}
 
+// Factorial
+let factorial = 1;
 
-let resultado = notaFinal>=minimoAprobar? "Aprobo" : "Reprobo";
+for (let i = 1; i <= numero; i++) {
+    factorial *= i;
+}
 
-console.log(`
-Su nota es: ${notaFinal}
-Estado: ${resultado} `)
+console.log("El factorial de " + numero + " es: " + factorial);
